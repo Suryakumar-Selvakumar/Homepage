@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 100 125" x="0px" y="0px">
+<defs>
+    <linearGradient id="trophyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#DAA520; stop-opacity:1" /> <!-- Goldenrod color -->
+      <stop offset="30%" style="stop-color:#FFD700; stop-opacity:1" /> <!-- Gold color -->
+      <stop offset="70%" style="stop-color:#FFC700; stop-opacity:1" /> <!-- Lighter gold -->
+      <stop offset="100%" style="stop-color:#FFF8DC; stop-opacity:1" /> <!-- Cornsilk for a bright finish -->
+    </linearGradient>
+  </defs>
+<path 
+d="M82.29,30.5A16.87,16.87,0,0,1,70.14,46.64a20.73,20.73,0,0,0,1.4-7.39V25.83H82.29ZM50,22l3.21,10,10.49,0L55.22,38,58.48,48,50,41.79,41.52,48,44.78,38,36.29,31.9l10.49,0ZM17.71,30.5V25.83H28.46V39.25a21.41,21.41,0,0,0,1.4,7.39A16.87,16.87,0,0,1,17.71,30.5Zm67.3-10H71.54V17.79a2.68,2.68,0,0,0-2.68-2.68H31.17a2.71,2.71,0,0,0-2.71,2.68v2.68H15a2.71,2.71,0,0,0-2.72,2.68V30.5a22.18,22.18,0,0,0,21,22.09,21.27,21.27,0,0,0,8.66,6.56V66.1H39.24a8.05,8.05,0,0,0-8.07,8v8a2.71,2.71,0,0,0,2.69,2.71H66.17a2.73,2.73,0,0,0,2.69-2.71v-8a8.08,8.08,0,0,0-8.1-8H58.08V59.15a21.27,21.27,0,0,0,8.66-6.56,22.18,22.18,0,0,0,21-22.09V23.15A2.68,2.68,0,0,0,85,20.47Z"
+fill="url(#trophyGradient)"
+/>
+</svg>
