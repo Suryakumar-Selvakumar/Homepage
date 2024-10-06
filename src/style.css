@@ -30,10 +30,6 @@ body {
   flex-direction: column;
 }
 
-/* body::-webkit-scrollbar {
-  display: none;
-} */
-
 header {
   height: min-content;
   display: flex;
@@ -238,7 +234,7 @@ footer {
   padding-right: 1.25rem;
 }
 
-.contact-details > div > p {
+.contact-details > div {
   font-size: min(7.5vw, 1.25rem);
   padding-left: 1.25rem;
   padding-right: 1.25rem;
@@ -252,6 +248,10 @@ footer {
 
 .email {
   padding-top: 0.5rem;
+}
+
+.email-icon {
+  display: none;
 }
 
 .nav-links {
@@ -307,7 +307,7 @@ footer {
   .person-image {
     z-index: 3;
     width: 43.3vw;
-    max-height: 500px;
+    max-height: 492.5px;
     position: relative;
     right: -40px;
     place-self: start;
@@ -342,7 +342,7 @@ footer {
   }
 
   .about-me > h1::before {
-    content: '';
+    content: "";
     float: left;
     height: 1em;
     width: 42.5vw;
@@ -356,7 +356,7 @@ footer {
   }
 
   .about-me > p::before {
-    content: '';
+    content: "";
     float: left;
     height: 8em;
     width: 32.5vw;
@@ -389,7 +389,7 @@ footer {
     column-gap: 3rem;
     place-items: start center;
   }
-  
+
   .project {
     display: flex;
     flex-direction: column;
@@ -397,11 +397,71 @@ footer {
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.6);
   }
 
-  .project:nth-child(odd){
+  .project:nth-child(odd) {
     place-self: end;
   }
 
   .project:nth-child(even) {
     place-self: start;
+  }
+
+  footer {
+    margin-top: 15rem;
+    display: flex;
+    flex-direction: row;
+    height: 725px;
+    background-color: rgb(0, 155, 179);
+  }
+
+  .contact-details > h1 {
+    padding: 8rem 2rem 0 2rem;
+    text-align: left;
+  }
+
+  .contact-details > div {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .contact-details > p:first-of-type {
+    padding-left: 2rem;
+    padding-right: 4rem;
+  }
+
+  .ph-no {
+    padding-left: 0rem;
+  }
+
+  .email {
+    padding-top: 0.5rem;
+    padding-left: 0rem;
+  }
+  
+  .email-icon, .ph-no-icon {
+    display: inline-block;
+    width: 2rem;
+    vertical-align: middle;
+  }
+  
+  .nav-links {
+    justify-content: start;
+    padding: 0.5rem 2rem 0 2rem;
+  }
+
+  .nav-links > img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .person-image-one {
+    width: 70%;
+    height: 600px;
+    margin: 3rem 3rem 3rem 0;
+  }
+}
+
+@media (min-width: 943px) and (max-width: 1024px) {
+  .person-image {
+    min-height: 515px;
   }
 }
