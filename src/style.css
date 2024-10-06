@@ -55,10 +55,11 @@ header {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -200px;
-  height: 460px;
+  bottom: -240px;
+  height: 500px;
   background-color: rgb(255, 255, 255);
   transform: skewY(-32.5deg);
+  box-shadow: inset 1px 3px 3px rgba(0, 0, 0, 0.5);
 }
 
 .person-image {
@@ -143,7 +144,7 @@ main > h1 {
   flex-direction: column;
   width: 80%;
   min-height: 500px;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.6);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
 }
 
 .project-image {
@@ -273,4 +274,134 @@ footer {
   background-position: top left;
   width: 100%;
   height: 650px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  header {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: 920px;
+  }
+
+  .skewed {
+    z-index: 1;
+    height: 800px;
+    width: 100%;
+    position: absolute;
+    background-color: rgb(0, 155, 179);
+    place-self: start;
+  }
+
+  .skewed::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -135px;
+    height: 435px;
+    background-color: rgb(255, 255, 255);
+    transform: skewY(-15deg);
+    box-shadow: inset 1px 3px 3px rgba(0, 0, 0, 0.5);
+  }
+
+  .person-image {
+    z-index: 3;
+    width: 43.3vw;
+    max-height: 500px;
+    position: relative;
+    right: -40px;
+    place-self: start;
+    margin-top: 3rem;
+    align-items: start;
+  }
+
+  #name {
+    position: relative;
+    left: 30vw;
+    white-space: nowrap;
+    padding-top: 2rem;
+    font-size: min(7.5vw, 4.5rem);
+  }
+
+  .about-me {
+    margin-top: 1.75rem;
+    place-self: center;
+    background-color: white;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    width: 77vw;
+    min-height: 550px;
+    position: relative;
+    left: -35vw;
+    align-items: start;
+  }
+
+  .about-me > h1 {
+    font-size: min(7vw, 3rem);
+    padding-right: 4vw;
+    padding-top: 4rem;
+  }
+
+  .about-me > h1::before {
+    content: '';
+    float: left;
+    height: 1em;
+    width: 42.5vw;
+  }
+
+  .about-me > p {
+    font-size: 1.6rem;
+    padding-right: 2.15rem;
+    padding-bottom: 3rem;
+    line-height: 1.5;
+  }
+
+  .about-me > p::before {
+    content: '';
+    float: left;
+    height: 8em;
+    width: 32.5vw;
+  }
+
+  .nav-icons {
+    display: none;
+  }
+
+  main {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    width: 100%;
+    /* padding: 0 10vw; */
+    align-items: center;
+  }
+
+  main > h1 {
+    align-self: flex-start;
+    padding-left: 9vw;
+  }
+
+  .my-work {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    width: 100%;
+    row-gap: 3rem;
+    column-gap: 3rem;
+    place-items: start center;
+  }
+  
+  .project {
+    display: flex;
+    flex-direction: column;
+    min-height: 500px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.6);
+  }
+
+  .project:nth-child(odd){
+    place-self: end;
+  }
+
+  .project:nth-child(even) {
+    place-self: start;
+  }
 }
