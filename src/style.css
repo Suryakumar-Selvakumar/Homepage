@@ -96,7 +96,7 @@ header {
 h1 {
   font-family: myFontTitle;
   font-weight: 500;
-  font-size: min(17.5vw, 3.5rem);
+  font-size: min(17.5vw, 3rem);
 }
 
 .about-me > p {
@@ -105,6 +105,7 @@ h1 {
   font-weight: 100;
   color: #555555;
   padding: 0 2rem;
+  line-height: 1.5;
 }
 
 .nav-icons {
@@ -250,7 +251,8 @@ footer {
   padding-top: 0.5rem;
 }
 
-.email-icon {
+.email-icon,
+.ph-no-icon {
   display: none;
 }
 
@@ -276,6 +278,11 @@ footer {
   height: 650px;
 }
 
+img,
+svg {
+  cursor: pointer;
+}
+
 @media (min-width: 768px) and (max-width: 1024px) {
   header {
     display: grid;
@@ -284,22 +291,13 @@ footer {
   }
 
   .skewed {
-    z-index: 1;
     height: 800px;
-    width: 100%;
-    position: absolute;
-    background-color: rgb(0, 155, 179);
     place-self: start;
   }
 
   .skewed::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
     bottom: -135px;
     height: 435px;
-    background-color: rgb(255, 255, 255);
     transform: skewY(-15deg);
     box-shadow: inset 1px 3px 3px rgba(0, 0, 0, 0.5);
   }
@@ -336,7 +334,6 @@ footer {
   }
 
   .about-me > h1 {
-    font-size: min(7vw, 3rem);
     padding-right: 4vw;
     padding-top: 4rem;
   }
@@ -436,13 +433,14 @@ footer {
     padding-top: 0.5rem;
     padding-left: 0rem;
   }
-  
-  .email-icon, .ph-no-icon {
+
+  .email-icon,
+  .ph-no-icon {
     display: inline-block;
     width: 2rem;
     vertical-align: middle;
   }
-  
+
   .nav-links {
     justify-content: start;
     padding: 0.5rem 2rem 0 2rem;
@@ -463,5 +461,143 @@ footer {
 @media (min-width: 943px) and (max-width: 1024px) {
   .person-image {
     min-height: 515px;
+  }
+}
+
+@media (min-width: 1025px) {
+  header {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: 700px;
+    place-items: start center;
+  }
+
+  .skewed {
+    height: 840px;
+  }
+
+  .skewed::before {
+    bottom: -165px;
+    height: 455px;
+    transform: skewY(-10deg);
+    box-shadow: inset 1px 3px 7px rgba(0, 0, 0, 0.5);
+  }
+
+  .person-image {
+    width: 35vw;
+    max-height: 600px;
+    position: relative;
+    right: -100px;
+    place-self: center;
+    background-image: url("./images/man-desktop-high.jpg");
+    justify-content: center;
+    z-index: 3;
+  }
+
+  #name {
+    align-self: flex-end;
+  }
+
+  .about-me {
+    place-self: center;
+    background-color: white;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    width: 60vw;
+    min-height: 485px;
+    position: relative;
+    left: -5vw;
+    align-items: end;
+    margin-top: 2rem;
+    padding-top: 0;
+  }
+
+  .about-me > h1 {
+    padding-top: 3rem;
+    align-self: flex-start;
+  }
+
+  .about-me > h1::before {
+    content: "";
+    float: left;
+    height: 1em;
+    width: 165px;
+  }
+
+  .about-me > p {
+    font-size: min(2vw, 1.6rem);
+    padding: 0 2.5rem 0 0;
+    line-height: 1.5;
+    padding-bottom: 0;
+  }
+
+  .about-me > p::before {
+    content: "";
+    float: left;
+    height: 8em;
+    width: 165px;
+  }
+
+  .nav-icons {
+    padding-right: 2.5rem;
+    position: relative;
+    top: 3rem;
+  }
+
+  main {
+    margin-top: 7.5rem;
+    z-index: 1;
+    align-items: center;
+    background-color: white;
+  }
+
+  main > h1 {
+    align-self: flex-start;
+    padding-left: 9vw;
+  }
+
+  .my-work {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    width: 100%;
+    row-gap: 3rem;
+    column-gap: 3rem;
+    place-items: start center;
+  }
+
+  .project {
+    display: flex;
+    flex-direction: column;
+    min-height: 500px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.6);
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .nav-icons {
+    padding-bottom: 2rem;
+    position: relative;
+    top: 1rem;
+  }
+  .about-me > p::before {
+    content: "";
+    float: left;
+    height: 10em;
+    width: 165px;
+  }
+  .about-me {
+    padding-bottom: 2rem;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1238px) {
+  .about-me > p::before {
+    content: "";
+    float: left;
+    height: 11em;
+    width: 165px;
+  }
+  .nav-icons {
+    position: relative;
+    top: 1rem;
   }
 }
