@@ -1,7 +1,7 @@
-# Battleship
+# Homepage
+A responsive dummy portfolio page with unique layouts for mobile, tablet and Desktop resolutions created using media queries
 
-The Board Game Battleship built using Test Driven Development (TDD) approach facilitated with Jest
 
-#### Demo - https://suryakumar-selvakumar.github.io/Battleship/
+#### Demo - https://suryakumar-selvakumar.github.io/Homepage/
 
 
